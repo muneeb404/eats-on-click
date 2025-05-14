@@ -1,0 +1,256 @@
+.orders-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.orders-header {
+  margin-bottom: 30px;
+}
+
+.orders-header h2 {
+  font-size: 24px;
+  color: #FF3131;
+  margin-bottom: 8px;
+}
+
+.orders-header p {
+  color: #6d6d6d;
+  font-size: 16px;
+}
+
+.orders-content {
+  width: 100%;
+}
+
+/* Loading state */
+.orders-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #FFE2E2;
+  border-radius: 50%;
+  border-top-color: #FF3131;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty state */
+.orders-empty {
+  text-align: center;
+  padding: 60px 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  color: #6d6d6d;
+}
+
+/* Orders list */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.order-card-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #eee;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-items-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.order-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FF3131;
+}
+
+.order-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 160px;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #FF3131;
+  box-shadow: 0 0 0 2px rgba(255, 49, 49, 0.1);
+}
+
+.status-select.food-processing {
+  background-color: #FFF3CD;
+  border-color: #FFE69C;
+  color: #856404;
+}
+
+.status-select.out-for-delivery {
+  background-color: #D1ECF1;
+  border-color: #BEE5EB;
+  color: #0C5460;
+}
+
+.status-select.delivered {
+  background-color: #D4EDDA;
+  border-color: #C3E6CB;
+  color: #155724;
+}
+
+.order-card-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.order-items h4,
+.customer-details h4 {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-items-list {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+.customer-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.customer-address {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.customer-address p {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.customer-phone {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .order-card-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .customer-details {
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-card-header {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .order-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .order-icon {
+    display: none;
+  }
+  
+  .status-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-container {
+    padding: 15px;
+  }
+  
+  .order-card-header,
+  .order-card-content {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,293 @@
+/* Footer Container */
+.footer-container {
+  font-family: "Arial", sans-serif;
+  background-color: #ffe2e2;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  padding: 40px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-content {
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.newsletter-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.newsletter-text h2 {
+  font-size: 32px;
+  color: #1B2123;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.newsletter-text p {
+  color: #666;
+  line-height: 1.6;
+  max-width: 60%;
+}
+
+.newsletter-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  background-color: #ffe2e2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.form-input {
+  display: flex;
+  gap: 10px;
+}
+
+.form-container button {
+  background-color: #FF3131;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #27ae60;
+}
+
+.privacy-note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.privacy-note a {
+  color: #FF3131;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main Footer */
+.main-footer {
+  width: 80%;
+  padding: 40px 0;
+  background-color: white;
+  border-radius: 15px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+/* Logo and Social Media */
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 30px;
+}
+
+.footer-logo-container {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #f5f5f5;
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon i {
+  font-size: 20px;
+  color: #555;
+}
+
+.youtube i {
+  color: #ff0000;
+}
+
+.instagram i {
+  color: #e1306c;
+}
+
+.footer-image {
+  margin-top: 20px;
+}
+
+.food-basket {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Footer Links */
+.footer-links {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #FF3131;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.divider {
+  height: 2px;
+  background-color: #e2e2e2;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.copyright {
+  color: #747474;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1050px) {
+  .newsletter-content {
+    flex-direction: column;
+  }
+
+  .newsletter-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-text p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-brand {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletter-section {
+    padding: 20px 0;
+  }
+
+  .newsletter-content {
+    padding: 20px;
+  }
+
+  .newsletter-text h2 {
+    font-size: 24px;
+  }
+
+  .main-footer {
+    padding: 20px 0;
+  }
+  .form-input {
+    display: block;
+  }
+  .form-container input {
+    margin-bottom: 10px;
+  }
+}
