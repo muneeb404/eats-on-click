@@ -15,7 +15,7 @@ app.use(cors({
     origin: process.env.NODE_ENV === 'production' 
         ? [
             'https://eats-on-click-frontend.onrender.com',
-            'https://eats-on-click-admin.onrender.com'
+            'https://eats-on-click-admin-panel.onrender.com'
           ]
         : ['http://localhost:5173'],
     credentials: true

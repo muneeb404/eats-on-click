@@ -10,6 +10,7 @@ const Orders = ({ url }) => {
 
   const fetchAllOrders = async () => {
     try {
+      console.log("Backend URL:", url);
       setLoading(true);
       const response = await axios.get(url + "/api/order/list");
 
