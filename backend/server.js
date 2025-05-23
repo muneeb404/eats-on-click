@@ -17,7 +17,7 @@ app.use(cors({
             'https://eats-on-click-frontend.onrender.com',
             'https://eats-on-click-admin-panel.onrender.com'
           ]
-        : ['http://localhost:5173'],
+        : ['http://localhost:4173'],
     credentials: true
 }))
 

@@ -11,7 +11,7 @@ const Footer = () => {
     setLoading(true);
 
     const formData = new FormData(e.target);
-    formData.append("access_key", process.env.WEB_FORM_API); // Use your Web3Forms key
+    formData.append("access_key",  import.meta.env.VITE_WEB_FORM_API); // Use your Web3Forms key
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
